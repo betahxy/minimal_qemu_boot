@@ -10,7 +10,8 @@
 # to add too many control flags to gcc
 
 CC = x86_64-elf-gcc
-CFLAGS = -m32 -g -fno-builtin -Wall -g
+CFLAGS = -m32 -ffreestanding -fno-builtin -Wall -g -fno-builtin -nostdinc \
+	-nostdlib -mno-red-zone 
 
 LD = x86_64-elf-ld 
 
