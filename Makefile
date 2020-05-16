@@ -10,14 +10,14 @@
 # to add too many control flags to gcc
 
 CC = x86_64-elf-gcc
-CFLAGS = -m32 -ffreestanding -fno-builtin -Wall -g -fno-builtin -nostdinc \
+CFLAGS = -ffreestanding -fno-builtin -Wall -g -fno-builtin -nostdinc \
 	-nostdlib -mno-red-zone 
 
 LD = x86_64-elf-ld 
 
 # -n option has to be added to tell linker do not use paging because we don't need "demand paging" currently
 # this also enables multiboot2 header could appear at the beginning of final kernel image
-LDFLAGS = -n -melf_i386 
+LDFLAGS = -n  
 
 QEMU = qemu-system-x86_64
 

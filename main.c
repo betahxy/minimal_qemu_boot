@@ -8,7 +8,7 @@
 #define VGA_addr 0xb8000
 
 int kmain(){
-    char *str = "Hello world! This is elf-32 + multiboot2.";
+    char *str = "Hello world! This is elf-64 + multiboot2.";
     unsigned char * vga_ptr = (unsigned char*)VGA_addr;
     while(*str != '\0'){
         *(vga_ptr++) = *(str++);
